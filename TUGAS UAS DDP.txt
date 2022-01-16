@@ -1,0 +1,79 @@
+TUGAS UAS DDP
+
+Nama 	: Ida Ayu Gayatri Indraswari
+Nim 	: 2101010063
+Prodi 	: Sistem Informasi Malam
+
+
+Buatlah program dengan menggunakan pemgrograman cpp, tema bebas.
+
+#include <stdio.h>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Hitung Nilai IPK\n\n";
+	
+	for(int i = 0; i<=100; i++){
+		cout << "=";	
+	}
+	
+	// Deklarasi Variabel
+    string nama_matkul[5];
+    int sks [5];
+    float nilai[5];
+    float total_sks = 0;
+    float ip = 0;
+    float ipk = 0;
+    
+	// Input nama matkul
+    cout  << endl;
+    for(int i = 0; i<5 ;i++){
+        cout << "Masukkan nama matkul :";
+        cin >> nama_matkul[i];
+    }
+	
+	for(int i = 0; i<=100; i++){
+		cout << "=";	
+	}
+	
+	// Input SKS
+    cout<<endl<<"SKS :"<<endl;
+    for(int i = 0; i<5 ;i++){
+        cout << nama_matkul [i] << " : ";
+        cin >> sks [i];
+    }
+    
+	for(int i = 0; i<=100; i++){
+		cout << "=";	
+	}
+	
+	// Input NILAI
+    cout<<endl<<"Nilai :"<<endl;
+    for(int i = 0; i<5 ;i++){
+        cout << nama_matkul [i] << " : ";
+        cin >> nilai [i];
+    }
+    
+    // Hitung Nilai
+    int a[5];
+    for(int j = 0; j<5 ;j++){
+        total_sks += sks[j];
+        ip += (sks[j] * nilai[j]);
+    }
+    
+    ipk = ip/total_sks;
+	
+	for(int i = 0; i<=100; i++){
+		cout << "=";	
+	}
+    
+    cout<<"Total SKS : "<<total_sks<<endl;
+    cout<<"SKS x NIlai :"<<ip<<endl;
+    cout<<"Nilai IP : "<<ip*1/total_sks;
+    
+	
+	
+}
